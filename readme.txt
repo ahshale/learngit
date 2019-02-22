@@ -3,3 +3,4 @@ Test with remote repository.
 Create a branch.
 Check graph.
 Add conflict.
+Check conflict.
