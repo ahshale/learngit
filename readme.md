@@ -126,3 +126,22 @@ This is my first journey to [GitHub](https://github.com).
         ```Shell
         $ leave to be done
         ```
+
+### 5. ignore special file
+        ```Shell
+        $ leave to be done
+        ```
+
+### 6. customize alias
+        
+        ```Shell
+        # with '--global' the configuration will work for the current user, otherwise it will only work for the current repository.
+        The configuration file for each repository is its .git/config, and that for current user is .gitconfig in the user home directory.
+        $ git config --global alias.st status
+        $ git config --global alias.co checkout
+        $ git config --global alias.ci commit
+        $ git config --global alias.br branch
+        $ git config --global alias.unstage 'reset HEAD'
+        $ git config --global alias.last 'log -1'
+        $ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+        ```
