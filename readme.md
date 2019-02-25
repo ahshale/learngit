@@ -2,6 +2,23 @@ Git is a version control system.
 This is my first journey to [GitHub](https://github.com).
 ## Here are some commands in Git(learn from [Liao's wonderful blog](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)):
 
+### 0.Create Remote Repository
+#### Please first create a new repository <repo> on GitHub
+#### 0.1 Create a new repository on the command line
+```Shell
+$ echo "# <repo>" >> README.md
+$ git init
+$ git add README.md
+$ git commit -m "first commit"
+$ git remote add origin git@github.com:<user>/<repo>.git
+$ git push -u origin master
+```
+#### 0.2 Push an existing repository from the command line
+```Shell
+$ git remote add origin git@github.com:<user>/<repo>.git
+$ git push -u origin master
+```
+
 ### 1. Remote Repository & Local Repository
 #### 1.1 Clone repository from remote
 ```Shell
