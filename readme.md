@@ -139,9 +139,20 @@ $ git push origin <name>
 $ leave to be done
 ```
 
-### 4. tag
+### 4. Tag
+##### Tag is a snapshoot of repository and immovable pointer to some commit with simpler id, always used for version release
+#### 4.1 Create tag
 ```Shell
-$ leave to be done
+$ git tag <tagname,say"v1.0"> # on the newest commit
+$ git tag <tagname> <commit_id> # on specified commit
+$ git tag -a <tagname> -m <statement> <commit_id> # create
+```
+#### 4.2 Operate tag
+```Shell
+$ git tag -d <tagname> # delete tag in local repo
+$ git push origin <tagname> # push some tag to remote repo
+$ git push origin --tags # push all tags to remote
+$ git tag -d <tagname> + git push origin :refs/tags/<tagname> # delete tag in remote repo
 ```
 
 ### 5. ignore special file
