@@ -2,6 +2,7 @@ Git is a version control system.
 This is my first journey to [GitHub](https://github.com).
 ## Here are some commands in Git(learn from [Liao's wonderful blog](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)):
 
+
 ### 0.Create Remote Repository
 #### Please first create a new repository <repo> on GitHub
 #### 0.1 Create a new repository on the command line
@@ -18,6 +19,7 @@ $ git push -u origin master
 $ git remote add origin git@github.com:<user>/<repo>.git
 $ git push -u origin master
 ```
+
 
 ### 1. Remote Repository & Local Repository
 #### 1.1 Clone repository from remote
@@ -36,6 +38,7 @@ $ git push [remote] [local]
 ```Shell
 $ git init
 ```
+
 
 ### 2. Repository management
 #### 2.1 put changes in Working Directory to Stage in Repository .git
@@ -83,6 +86,7 @@ $ there is nothing you can do
 $ rm file
 $ git rm/add file
 ```
+
 
 ### 3. Branch Manangement 
 #### 3.1 All work should be done in dev branch, leaving master branch stable. Teammates merge their own changes to dev branch, and merge dev branch to master branch when necessary.
@@ -139,6 +143,7 @@ $ git push origin <name>
 $ leave to be done
 ```
 
+
 ### 4. Tag
 ##### Tag is a snapshoot of repository and immovable pointer to some commit with simpler id, always used for version release
 #### 4.1 Create tag
@@ -155,12 +160,37 @@ $ git push origin --tags # push all tags to remote
 $ git tag -d <tagname> + git push origin :refs/tags/<tagname> # delete tag in remote repo
 ```
 
-### 5. ignore special file
+
+### 5. .gitignore
+#### Please refer to [gitignore](https://github.com/github/gitignore) for various configuration files
 ```Shell
-$ leave to be done
+# Python
+__pycache__/
+*.py[cod]
+
+# File
+*.jpg
+*.mp4
+*.h5
+*.ckpt
+```
+##### 5.1 Principles for ignoring special files:
+```Shell
+1) ignore system automatically generated files
+2) ignore intermediate and executable files generated during compiling
+3) ignore configuration files with sensitive information
+```
+##### 5.2 Force add operation
+```Shell
+$ git add -f <file>
+```
+##### 5.3 Check out the reason for ignoring file 
+```Shell
+$ git check-ignore -v <file>
 ```
 
-### 6. customize alias
+
+### 6. Customize alias
 ##### with '--global' the configuration will work for the current user, otherwise it will only work for the current repository.
 ```Shell
 The configuration file for each repository is its .git/config, and that for current user is .gitconfig in the user home directory.
